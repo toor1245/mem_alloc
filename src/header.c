@@ -1,6 +1,6 @@
 #include <assert.h>
-#include "../include/internal/header.h"
-#include "../include/internal/binary_tree.h"
+#include "internal/header.h"
+#include "internal/binary_tree.h"
 
 #include "header_states.inl"
 

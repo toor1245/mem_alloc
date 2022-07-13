@@ -1,6 +1,6 @@
-#include "../include/internal/binary_tree.h"
-#include "../include/internal/alignment.h"
-#include "../include/internal/header.h"
+#include "internal/binary_tree.h"
+#include "internal/alignment.h"
+#include "internal/header.h"
 #include <stdio.h>
 #include <stdlib.h>
 

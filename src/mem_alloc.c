@@ -1,8 +1,8 @@
 #include <assert.h>
-#include "../include/mem_alloc.h"
-#include "../include/internal/header.h"
-#include "../include/internal/binary_tree.h"
-#include "../include/internal/arena.h"
+#include "mem_alloc.h"
+#include "internal/header.h"
+#include "internal/binary_tree.h"
+#include "internal/arena.h"
 #include <string.h>
 
 #define MAX_ALLOC_SIZE ARENA_DEFAULT_SIZE - sizeof(tree_node_t)
@@ -85,7 +85,7 @@ void *mem_realloc(void *ptr, size_t size) {
         header_t *merge_block = header_merge_block(header, left_header);
         header = header_split_block(merge_block, aligned_size, block_tree);
     }
-    void* realloc_ptr = mem_alloc(size);
+    void *realloc_ptr = mem_alloc(size);
     if (realloc_ptr != NULL) {
         memcpy(realloc_ptr, ptr, header->size - HEADER_ALIGN_SIZE);
         mem_dealloc(ptr);
